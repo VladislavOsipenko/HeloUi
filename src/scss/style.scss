@@ -1,0 +1,49 @@
+@import "libs/slick";
+@import "libs/fonts";
+@import "libs/variables";
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.fz14 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #050038;
+}
+
+.fz20 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #5B5E6D;
+}
+
+.fz72 {
+    font-family: 'Circular Std';
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 91px;
+    text-align: left;
+    color: #050038;
+}
+
+
+@import "blocks/_header";
+@import "blocks/_main";
+@import "blocks/_award";
+@import "blocks/_comments";
+
+    
+

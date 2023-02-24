@@ -1,0 +1,138 @@
+.main {
+    padding: 181px 0 100px 0;
+
+    &__title {
+        font-family: 'Circular Std';
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 120px;
+        text-align: center;
+        color: #050038;
+    }
+
+    &__subtitle {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        text-align: center;
+        color: #5B5E6D;
+    }
+
+    &__buttons {
+        width: 480px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 40px;
+
+    }
+
+    &__btn-1 {
+        cursor: pointer;
+        width: 208px;
+        height: 60px;
+        left: 721px;
+        top: 532px;
+        background: #0555FF;
+        border: none;
+        justify-content: center;
+        border-radius: 30px;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        transition: 0.3s all;
+        &:hover {
+            background: #0f4fd8;
+            transition: 0.3s all;
+            transform: scale(1.05);
+
+        }
+    }
+
+    &__btn-2 {
+        cursor: pointer;
+        width: 251px;
+        height: 60px;
+        left: 949px;
+        top: 532px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 40px rgba(176, 201, 253, 0.3);
+        border: none;
+        border-radius: 30px;
+        font-family: 'Inter';
+        justify-content: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: #0555FF;
+        transition: 0.3s all;
+        &:hover {
+            background-color: rgb(225, 225, 225);
+            transition: 0.3s all;
+            transform: scale(1.05);
+
+        }
+    }
+
+    &__pictures {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 100%;
+            &:first-child {
+                width: 100px;
+            }
+            &:last-child {
+                width: 100px;
+            }
+        }
+    }
+
+    &__more {
+        font-family: 'Inter';
+        display: block;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #5B5E6D;
+    }
+
+
+
+    &__wrapper {
+        display: flex;
+        margin-top: 25px;
+        min-width: 0;
+       
+    }
+
+    &__icon {
+        padding: 0 25px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.divider {
+    margin-top: 100px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
