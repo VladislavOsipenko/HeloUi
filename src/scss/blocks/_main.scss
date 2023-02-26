@@ -107,27 +107,29 @@
         justify-content: center;
         color: #5B5E6D;
     }
+    &__swiper {
+        margin-top: 33px;
+        height: 110px;
+        position: relative;
+        overflow: hidden;
 
+    }
 
-
-    &__wrapper {
-        display: flex;
-        margin-top: 25px;
-        min-width: 0;
-       
+    &__pagination {
+        top: 90px;
+    }
+    .swiper-pagination-bullet {
+        width: 30px;
+        height: 3px;
+        background: #050038;
+        border-radius: 1px;
     }
 
     &__icon {
         padding: 0 25px;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        img {
-            width: 100%;
-        }
     }
+    
 }
 
 .divider {

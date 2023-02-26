@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     @@include('html/head.html',{
-        "title":"Главная"
+        "title":"Main"
     })
     <body>
         @@include('html/header.html',{})
@@ -23,9 +23,9 @@
                         </button>
                     </div>
                     <div class="main__pictures">
-                        <img class="main__pictures-group" src="img/Group_1.svg" alt="icon">
-                        <img src="img/img_main.png" alt="img">
-                        <img class="main__pictures-group" src="img/Group_2.svg" alt="icon">
+                        <img loading="lazy" class="main__pictures-group" src="img/Group_1.svg" alt="icon">
+                        <img loading="lazy" src="img/img_main.png" alt="img">
+                        <img loading="lazy" class="main__pictures-group" src="img/Group_2.svg" alt="icon">
                     </div>
                     <p class="main__more">
                         More than 1.8 million people across 50,000 companies choose Spellon
@@ -34,21 +34,48 @@
                         <div class="main__wrapper swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="main__icon">
-                                    <img src="img/img_1.png" alt="icon">
+                                    <img src="img/jll.svg" alt="icon">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="main__icon">
-                                    <img src="img/img_1.png" alt="icon">
+                                    <img src="img/netflix.svg" alt="icon">
                                 </div>
                             </div>
-                            <div class="swiper-slide"><div class="main__icon"><img src="img/img_1.png" alt="icon"></div></div>
-                            <div class="swiper-slide"><div class="main__icon"><img src="img/img_1.png" alt="icon"></div></div>
+                            <div class="swiper-slide">
+                                <div class="main__icon">
+                                    <img src="img/hubspot.svg" alt="icon">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main__icon">
+                                    <img src="img/atlassian.svg" alt="icon">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main__icon">
+                                    <img src="img/juniper.svg" alt="icon">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main__icon">
+                                    <img src="img/lacoste.svg" alt="icon">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main__icon">
+                                    <img src="img/jll.svg" alt="icon">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="main__icon">
+                                    <img src="img/lacoste.svg" alt="icon">
+                                </div>
+                            </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="main__pagination swiper-pagination"></div>                           
                     </div>
-                    <div class="divider">
-                    </div>
+                    <div class="divider"></div>
                 </div>
             </div>
 
@@ -82,12 +109,12 @@
                                 </a>
                             </div>
                             <div class="award__img">
-                                <img src="img/img_1.png" alt="img">
+                                <img loading="lazy" src="img/img_1.png" alt="img">
                             </div>
                         </div>
                         <div class="award__item">
                             <div class="award__img">
-                                <img src="img/img_2.png" alt="img">
+                                <img loading="lazy" src="img/img_2.png" alt="img">
                             </div>
                             <div class="award__descr">
                                 <div class="award__descr-title fz72">
@@ -114,7 +141,7 @@
                                 </a>
                             </div>
                             <div class="award__img">
-                                <img src="img/img_3.png" alt="img">
+                                <img loading="lazy" src="img/img_3.png" alt="img">
                             </div>
                         </div>
                     </div>
@@ -300,7 +327,6 @@
             
         </main>
         @@include('html/footer.html',{})
-        <script src="`js/slick.min.js"></script>
         <script src="js/app.min.js"></script>
     </body>
 </html>

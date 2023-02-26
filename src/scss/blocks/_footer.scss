@@ -1,0 +1,113 @@
+.footer {
+    background-color: #130C3A;
+    padding-top: 150px;
+
+    &__title {
+        color: #fff;
+        text-align: center;
+    }
+    &__form {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        input {
+            width: 528px;
+            height: 78px;
+            padding: 0 30px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px 0px 0px 10px;
+            background-color: rgba(0, 0, 0, 0);
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 32px;
+            color: #C1C1C1;
+        }
+        button {
+            cursor: pointer;
+            width: 221px;
+            height: 80px;
+            background: #0555FF;
+            border: none;
+            border-radius: 0px 10px 10px 0px;
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 32px;
+            text-align: center;
+            color: #FFFFFF;
+            transition: .3s all;
+            &:hover {
+                transform: scale(1.05);
+                transition: .3s all;
+                background: #0f4fd8;
+            }
+        }
+        
+        
+    }
+
+    &__info {
+        margin-top: 165px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-title {
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        color: #FFFFFF;
+    }
+
+    &__item-wrapper {
+        margin-top: 33px;
+        display: flex;
+        flex-direction: column;
+        a, p {
+            padding-top: 10px;
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: #7884A6;
+            text-decoration: none;
+            transition: .3s all;
+            &:hover {
+                transition: .3s all;
+                color: #fff
+            }
+        }
+    }
+
+    &__icons {
+        padding-top: 30px;
+    }
+
+    &__end {
+        margin-top: 50px;
+        height: 60px;
+        width: 100%;
+        background: #0F0937;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            font-family: 'inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+

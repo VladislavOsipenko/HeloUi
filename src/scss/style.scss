@@ -1,4 +1,4 @@
-@import "libs/slick";
+
 @import "libs/fonts";
 @import "libs/variables";
 
@@ -9,9 +9,11 @@
 }
 
 
+
 .container {
     width: 1320px;
     margin: 0 auto;
+
 }
 
 .fz14 {
@@ -44,6 +46,7 @@
 @import "blocks/_main";
 @import "blocks/_award";
 @import "blocks/_comments";
+@import "blocks/_footer";
 
     
 
