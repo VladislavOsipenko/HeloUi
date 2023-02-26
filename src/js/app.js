@@ -20,9 +20,39 @@ document.addEventListener('DOMContentLoaded', () => {
             stopOnLastSlide: false,
             disableOnInteraction: true
         },
-        
+        breakpoints: {
+            992: {
+                slidesPerView: 5,
+            },
+            768: {
+                slidesPerView: 4,
+            },
+            576: {
+                slidesPerView: 3,
+            },
+            320: {
+                slidesPerView: 2,
+            }
+            
+
+        }
         
     });
+    const menu = document.querySelector('.header__menu'),
+        menuItem = document.querySelectorAll('.header__li'),
+        hamburger = document.querySelector('.header__hamburger');
+    
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('header__hamburger_active');
+            menu.classList.toggle('header__menu_active');
+        });
+    
+        menuItem.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.toggle('header__hamburger_active');
+                menu.classList.toggle('header__menu_active');
+            })
+        })
 });
 
 
