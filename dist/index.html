@@ -22,8 +22,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20230301204231"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230301204231">
 </head>
     <body>
         <header>
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="header__wrapper">
                 <a href="" class="header__logo">
-                    <img src="../img/HelloUI.svg" alt="logo">
+                    <img src="img/HelloUI.svg" alt="logo">
                 </a>
                 <nav class="header__menu">
                     <li class="header__li"><a href="#" class="header__link">Docs</a></li>
@@ -46,8 +46,8 @@
                     <span></span>
                 </div>
                 <div class="header__free">
-                    <a href="#" class="header__sign">Sign in</a>
-                    <button class="header__btn">
+                    <a href="#" data-signin="signin" class="header__sign">Sign in</a>
+                    <button class="header__btn" data-modal="modal">
                         Try for Free
                     </button>
                 </div>
@@ -66,18 +66,20 @@
                     <p class="main__subtitle">
                         Build one project that runs natively on all your term now<br> users' devices to turn for that you can do.
                     </p>
-                    <div class="main__buttons">
-                        <button class="main__btn-1">
+                    <ul class="main__buttons">
+                        <li data-modal="modal" class="main__btn main__btn-active">
                             Try for Free
-                        </button>
-                        <button class="main__btn-2">
+                        </li>
+                        <li class="main__btn">
                             Discover in Video
-                        </button>
+                        </li>
+                    </ul>
+                    <div class="main__pictures main__pictures-active">
+                        <picture><source srcset="img/img_main.webp" type="image/webp"><img loading="lazy" src="img/img_main.png" alt="img"></picture>
                     </div>
                     <div class="main__pictures">
-                        <img loading="lazy" class="main__pictures-group" src="img/Group_1.svg" alt="icon">
-                        <img loading="lazy" src="img/img_main.png" alt="img">
-                        <img loading="lazy" class="main__pictures-group" src="img/Group_2.svg" alt="icon">
+                        <picture><source srcset="img/img_1.webp" type="image/webp"><img class="main__pictures-img" loading="lazy" src="img/img_1.png" alt="img"></picture>
+                        <img class="main__pictures-play" src="img/play.svg" alt="play">
                     </div>
                     <p class="main__more">
                         More than 1.8 million people across 50,000 companies choose Spellon
@@ -161,12 +163,12 @@
                                 </a>
                             </div>
                             <div class="award__img">
-                                <img loading="lazy" src="img/img_1.png" alt="img">
+                                <picture><source srcset="img/img_1.webp" type="image/webp"><img loading="lazy" src="img/img_1.png" alt="img"></picture>
                             </div>
                         </div>
                         <div class="award__item">
                             <div class="award__img award__media-first">
-                                <img loading="lazy" src="img/img_2.png" alt="img">
+                                <picture><source srcset="img/img_2.webp" type="image/webp"><img loading="lazy" src="img/img_2.png" alt="img"></picture>
                             </div>
                             <div class="award__descr award__media-second">
                                 <div class="award__descr-title fz72">
@@ -193,7 +195,7 @@
                                 </a>
                             </div>
                             <div class="award__img ">
-                                <img loading="lazy" src="img/img_3.png" alt="img">
+                                <picture><source srcset="img/img_3.webp" type="image/webp"><img loading="lazy" src="img/img_3.png" alt="img"></picture>
                             </div>
                         </div>
                     </div>
@@ -376,6 +378,49 @@
                 </div>
             </div>
 
+            <div class="overlay">
+                <div class="modal modal__block" id="modal">
+                    <div class="modal__close">&times;</div>
+                    <div class="modal__title fz20">
+                        Just fill out the application form
+                    </div>
+                    <div class="modal__subtitle fz20">
+                        and we will call you back within 10 minutes
+                    </div>
+                    <div class="modal__form">
+                        <form action="#" id="modal__form">
+                            <input type="text" name="name" placeholder="Enter your name">
+                            <input type="phone" name="phone" placeholder="Enter your phone">
+                            <input type="email" name="email" placeholder="Enter your email">
+                            <button class="modal__btn header__btn">Enter</button>
+                        </form>
+                    </div>
+                    
+                </div>
+                
+                <div class="singin modal__block" id="signin">
+                    <div class="modal__close">&times;</div>
+                    <div class="modal__title fz20">Authorization</div>
+                    <div class="modal__form">
+                        <form action="#" id="modal__forma">
+                            <input type="text" name="name" placeholder="Enter your name">
+                            <input type="text" name="phone" placeholder="Enter your pasword">
+                            <button class="modal__btn header__btn">Enter</button>
+                        </form>
+                    </div>
+                    
+
+                </div>
+
+                <div class="thanks modal__block" id="thanks">
+                    <div class="modal__close">&times;</div>
+                    <div class="modal__title fz20">Thank you for your application!</div>
+                    <div class="modal__subtitle fz14">Our manager will contact you soon!</div>
+                </div>
+
+
+            </div>
+
             
         </main>
         <footer>
@@ -384,8 +429,8 @@
             <div class="footer__title fz72">
                 It’s easy to  get<br>started. Start now.
             </div>
-            <form class="footer__form" action="#">
-                <input name="email" required placeholder="Enter your email" type="email">
+            <form id="footer-form" class="footer__form" action="#">
+                <div class="footer__valid"><input name="email" placeholder="Enter your email" type="email"></div>
                 <button>Get Started</button>
             </form>
             <div class="footer__info">
@@ -397,10 +442,11 @@
                         <p>Nort West, South New Work,United State</p>
                         <a href="tel:+12462540569">+1 246-254-0569</a>
                         <a href="#">Info@example.com</a>
+                        <div class="footer__icons">
+                            <img src="img/footer_icons.svg" alt="icons">
+                        </div>
                     </div>
-                    <div class="footer__icons">
-                        <img src="img/footer_icons.svg" alt="icons">
-                    </div>
+                    
                 </div>
                 <div class="foote__item">
                     <div class="footer__item-title">
@@ -445,6 +491,9 @@
     </div>
     
 </footer>
-        <script src="js/app.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js?_v=20230301204231"></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js?_v=20230301204231"></script>
+        <script src="js/jquery.validate.min.js?_v=20230301204231"></script>
+        <script src="js/app.min.js?_v=20230301204231"></script>
     </body>
 </html>

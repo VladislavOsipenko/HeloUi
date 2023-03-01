@@ -46,6 +46,20 @@
         
         
     }
+    &__valid {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .validator {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #fff;
+    }
 
     &__info {
         margin-top: 165px;

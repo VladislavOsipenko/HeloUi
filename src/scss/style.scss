@@ -16,6 +16,8 @@
 
 }
 
+
+
 .fz14 {
     font-family: 'Inter';
     font-weight: 400;
@@ -42,12 +44,12 @@
     
 }
 
-
 @import "blocks/_header";
 @import "blocks/_main";
 @import "blocks/_award";
 @import "blocks/_comments";
 @import "blocks/_footer";
+@import "blocks/_modal";
 @import "blocks/_media";
 
     

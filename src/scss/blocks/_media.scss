@@ -15,18 +15,7 @@
         &__title {
             font-size: 72px;
         }
-        &__pictures {
-            flex-direction: column;
-            justify-content: center;
-            img {
-                &:last-child {
-                    display: none;
-                }
-                &:first-child {
-                    display: none;
-                }
-            }
-        }
+
     }
 }
 
@@ -160,17 +149,75 @@
         &__subtitle {
             padding-top: 15px;
         }
+        &__pictures {
+            &-play {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &__more {
+            text-align: center;
+        }
     }
     .footer {
+        &__form {
+            input {
+                width: 350px;
+            }
+        }
         &__info {
             row-gap: 30px;
             margin-top: 60px;
+            flex-direction: column;
         }
         &__item {
             &-wrapper {
                 flex-direction: column;
             }
             
+        }
+        &__item-title {
+            letter-spacing: 2px;
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            &:before, &::after {
+                content: '';
+                width: 10px;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                top: 12px;
+                transition: 0.3s;
+            }
+            &:before {
+                transform: rotate(40deg);	
+                left: 0;
+            }   
+            &::after {
+                transform: rotate(-40deg);
+                left: 8px;
+            }  
+            &.active {
+                &:before, &::after {
+                    background-color: red
+                }
+                &::before {
+                    transform: rotate(-40deg)
+                }
+                &::after {
+                    transform: rotate(40deg)
+                }    
+            }    
+        } 
+        &__item-wrapper {
+            margin-top: 10px;
+            display: none;
+            padding-left: 30px;
+            a {
+                display: inline-block;
+                width: 100%;
+            }
         }
     }
 }
@@ -182,6 +229,11 @@
     }
     .fz72 {
         line-height: 50px;
+    }
+    .modal {
+        &__block {
+            width: 230px;
+        }
     }
     .header {
         
